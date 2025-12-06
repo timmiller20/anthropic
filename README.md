@@ -10,7 +10,7 @@ A simple web application that allows cyclists to upload photos from their rides 
 - **💬 Descriptions**: Add optional descriptions to your photos
 - **💾 Local Storage**: All photos are saved in your browser's local storage
 - **🖼️ Photo Popups**: Click on any marker to see the photo and details
-- **🗑️ Delete Photos**: Remove individual photos or clear all at once
+- **🗑️ Delete Photos**: Remove individual photos one at a time
 
 ## How to Use
 
@@ -39,7 +39,6 @@ A simple web application that allows cyclists to upload photos from their rides 
 
 7. **Delete Photos**:
    - Click "Delete" in a photo's popup to remove it
-   - Use "Clear All Photos" to remove all photos (with confirmation)
 
 ## Technical Details
 
