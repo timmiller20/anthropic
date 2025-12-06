@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyclist Photo Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚴 Cyclist Photo Map</h1>
+            <p>Upload your cycling photos and pin them to the map!</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Upload Panel -->
+            <div class="upload-panel">
+                <h2>Add a Photo</h2>
+
+                <div class="upload-section">
+                    <label for="photo-upload" class="upload-label">
+                        <div class="upload-box">
+                            <span class="upload-icon">📷</span>
+                            <span>Click to upload photo</span>
+                        </div>
+                    </label>
+                    <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                </div>
+
+                <div id="preview-section" class="preview-section" style="display: none;">
+                    <img id="photo-preview" src="" alt="Photo preview">
+                    <button id="remove-photo" class="btn btn-secondary">Remove Photo</button>
+                </div>
+
+                <div class="location-section">
+                    <h3>Select Location</h3>
+                    <p class="instruction">Click on the map to select a location</p>
+                    <div id="selected-location" class="location-display">
+                        <span>No location selected</span>
+                    </div>
+                </div>
+
+                <div class="description-section">
+                    <label for="photo-description">Description (optional)</label>
+                    <textarea id="photo-description" rows="3" placeholder="Add a note about this ride..."></textarea>
+                </div>
+
+                <button id="add-to-map" class="btn btn-primary" disabled>Add to Map</button>
+                <button id="clear-all" class="btn btn-danger">Clear All Photos</button>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
