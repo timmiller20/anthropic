@@ -56,10 +56,6 @@ class CyclistPhotoMap {
         // Add to map button
         const addToMapBtn = document.getElementById('add-to-map');
         addToMapBtn.addEventListener('click', () => this.addPhotoToMap());
-
-        // Clear all photos
-        const clearAllBtn = document.getElementById('clear-all');
-        clearAllBtn.addEventListener('click', () => this.clearAllPhotos());
     }
 
     handlePhotoUpload(event) {
@@ -253,26 +249,6 @@ class CyclistPhotoMap {
         this.savePhotos();
 
         console.log('Photo deleted:', photoId);
-    }
-
-    clearAllPhotos() {
-        if (!confirm('Are you sure you want to delete all photos? This cannot be undone.')) {
-            return;
-        }
-
-        // Remove all markers
-        this.markers.forEach(markerObj => {
-            this.map.removeLayer(markerObj.marker);
-        });
-
-        // Clear arrays
-        this.photos = [];
-        this.markers = [];
-
-        // Clear localStorage
-        this.savePhotos();
-
-        console.log('All photos cleared');
     }
 
     resetForm() {
