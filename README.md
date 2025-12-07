@@ -5,7 +5,8 @@ A simple web application that allows cyclists to upload photos from their rides 
 ## Features
 
 - **📷 Photo Upload**: Upload photos from your cycling trips
-- **🗺️ Interactive Map**: Click anywhere on the map to select a location
+- **🔍 Location Search**: Search for cities, addresses, or landmarks by name
+- **🗺️ Interactive Map**: Click anywhere on the map to drop a pin at a location
 - **📍 Photo Markers**: View all your photos as markers on the map
 - **💬 Descriptions**: Add optional descriptions to your photos
 - **💾 Local Storage**: All photos are saved in your browser's local storage
@@ -21,8 +22,9 @@ A simple web application that allows cyclists to upload photos from their rides 
    - Select a photo from your device
    - You'll see a preview of the selected photo
 
-3. **Select a Location**:
-   - Click anywhere on the map to select where the photo was taken
+3. **Select a Location** (two ways):
+   - **Search**: Use the search box in the top-right corner of the map to search for a city, address, or landmark
+   - **Drop a Pin**: Click anywhere on the map to manually select a location
    - A temporary marker (📍) will appear at the selected location
    - You'll see the coordinates displayed in the sidebar
 
@@ -45,6 +47,7 @@ A simple web application that allows cyclists to upload photos from their rides 
 - **Frontend**: HTML, CSS, JavaScript
 - **Map Library**: Leaflet.js (open-source)
 - **Map Tiles**: OpenStreetMap
+- **Geocoding**: Leaflet Control Geocoder with Nominatim (OpenStreetMap search)
 - **Storage**: Browser LocalStorage
 - **No Backend Required**: Everything runs in your browser
 

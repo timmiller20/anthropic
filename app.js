@@ -41,6 +41,22 @@ class CyclistPhotoMap {
         // Add click event to select location
         this.map.on('click', (e) => this.selectLocation(e));
 
+        // Add search/geocoder control
+        const geocoder = L.Control.Geocoder.nominatim();
+        const searchControl = L.Control.geocoder({
+            geocoder: geocoder,
+            defaultMarkGeocode: false,
+            placeholder: 'Search for a place...',
+            errorMessage: 'Location not found',
+            position: 'topright'
+        }).on('markgeocode', (e) => {
+            // When a search result is selected, treat it like a map click
+            const latlng = e.geocode.center;
+            this.selectLocation({ latlng: latlng });
+            // Zoom to the selected location
+            this.map.setView(latlng, 15);
+        }).addTo(this.map);
+
         console.log('Map initialized successfully');
     }
 
