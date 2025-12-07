@@ -249,6 +249,62 @@ textarea:focus {
     background: #ee5a6f;
 }
 
+/* Geocoder Search Control Styling */
+.leaflet-control-geocoder {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.leaflet-control-geocoder-form input {
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.leaflet-control-geocoder-form input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.leaflet-control-geocoder-alternatives {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.leaflet-control-geocoder-alternatives li {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.leaflet-control-geocoder-alternatives li:hover {
+    background: #f8f9ff;
+}
+
+.leaflet-control-geocoder-alternatives li:last-child {
+    border-bottom: none;
+}
+
+.leaflet-control-geocoder-icon {
+    background-color: #667eea;
+    border-radius: 6px;
+}
+
+.leaflet-control-geocoder-icon:hover {
+    background-color: #764ba2;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .main-content {
